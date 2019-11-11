@@ -63,9 +63,10 @@ function makePersonObject(id1, name1, email1) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  const hello =  'Hello, name is ' + getName.name;
-  return hello
+
+
+function getName(sam) {
+  return 'Hello, my name is ' + sam.name;
   };
  
   
