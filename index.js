@@ -240,12 +240,14 @@ function getModelYears(inv) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(inventory) {
-  let years = []
+function getOlderCars(inventory, num) {
+  let newInventory = []
   for (let i = 0; i < inventory.length; i++){
-    years.push(inventory[i].car_year);
+    if (inventory[i].car_year <= num){
+      newInventory.push(inventory[i]);
+    }
   }
-  return years;
+  return newInventory;
 }
 
 /**
@@ -260,7 +262,7 @@ function getOlderCars(inventory) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inv) {
-  const GM = [Audi, Mercedes-Benz, Volkswagen, BMW];
+  const GM = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
   let newInv= [];
   let testObj;
 
@@ -294,13 +296,13 @@ function getGermanCars(inv) {
  *   return num * 2
  * }
 */
-const sum = null; const sum = (a, b) => {
+let sum = null; sum = (a, b) => {
    return a + b;
      }
-const addFive = null; const addFive = (num) => {
+let addFive = null;  addFive = (num) => {
      return num + 5
     }
-const argTimesTwo = null; const argTimesTwo =  (num) => {
+let argTimesTwo = null; argTimesTwo =  (num) => {
    return num * 2
   }
 
